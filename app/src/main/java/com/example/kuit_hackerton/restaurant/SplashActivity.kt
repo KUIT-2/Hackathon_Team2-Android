@@ -17,7 +17,7 @@ class SplashActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         installSplashScreen()
 
-            val myIntent = Intent(this, MainActivity::class.java)
+            val myIntent = Intent(this, RestaurantActivity::class.java)
             // startActivity를 해야 화면이동
             startActivity(myIntent)
             //intent flag제거해서 백스택 안 오게
