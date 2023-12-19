@@ -8,8 +8,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kuit_hackerton.R
+import com.example.kuit_hackerton.ReservationInfoCheckFragment
 import com.example.kuit_hackerton.TodayDecorator
 import com.example.kuit_hackerton.databinding.FragmentCalanderBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -66,7 +68,15 @@ lateinit var binding: FragmentCalanderBinding
         binding = FragmentCalanderBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
+//        val yourView = view?.findViewById<CardView>(R.id.cv)
+//
+//        binding.c.setOnClickListener{
+//            Log.d("qwe","qwe")
+//            val bottomsheet=ReservationInfoCheckFragment()
+//            bottomsheet.show(childFragmentManager,bottomsheet.tag)
+//
+//
+//        }
 
         // 프래그먼트의 레이아웃을 먼저 inflate
         // 레이아웃에서 MaterialCalendarView 찾아옴

@@ -27,13 +27,19 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSerchBinding.inflate(layoutInflater)
+        binding = FragmentSerchBinding.inflate(inflater, container, false)
         Log.d("whynot2","whynot2")
 
         //눌릴수있ㄴㄴ데 setonClick이 안받네
 
-        binding.rvPlaceChoice.setOnClickListener{
 
+        binding.root.setOnClickListener{
+            val myintent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
+            startActivity(myintent)
+
+        }
+        binding.rvPlaceChoice.requestFocus()
+        binding.rvPlaceChoice.setOnClickListener{
             val myintent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
             startActivity(myintent)
         }
@@ -42,12 +48,16 @@ class SearchFragment : Fragment() {
             val intent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
             startActivity(intent)
         }
+
+        binding.clListGuide.requestFocus()
+
         binding.clListGuide.setOnClickListener{
             Log.d("whynot1","whynot1")
             val intent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
             startActivity(intent)
         }
         imageSwiper.start()
+
         initDummyData()
         initVP()
         return binding.root
