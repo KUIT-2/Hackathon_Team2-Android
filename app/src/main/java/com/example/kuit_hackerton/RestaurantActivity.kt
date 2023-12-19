@@ -2,13 +2,8 @@ package com.example.kuit_hackerton
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import androidx.fragment.app.FragmentManager
-import com.example.kuit_hackerton.databinding.ActivityMainBinding
+import com.example.kuit_hackerton.CalanderFragment
 import com.example.kuit_hackerton.databinding.ActivityRestaurantBinding
-import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class RestaurantActivity : AppCompatActivity() {
     lateinit var binding: ActivityRestaurantBinding
@@ -16,7 +11,7 @@ class RestaurantActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRestaurantBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val bottomsheet=CalanderFragment()
+        val bottomsheet= CalanderFragment()
 
 
         //이거 resume에 적게?

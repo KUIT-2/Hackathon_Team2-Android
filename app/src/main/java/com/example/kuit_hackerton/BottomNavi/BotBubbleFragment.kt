@@ -1,20 +1,20 @@
-package com.example.kuit_hackerton
+package com.example.kuit_hackerton.BottomNavi
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.kuit_hackerton.databinding.FragmentBotGlassBinding
+import com.example.kuit_hackerton.databinding.FragmentBotBubbleBinding
 
-class BotGlassFragment:Fragment() {
-    lateinit var binding : FragmentBotGlassBinding
+class BotBubbleFragment: Fragment() {
+    lateinit var binding : FragmentBotBubbleBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBotGlassBinding.inflate(layoutInflater)
+        binding = FragmentBotBubbleBinding.inflate(layoutInflater)
         return binding.root
     }
 }

@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 class PlaceProductAdapter(val placeList: ArrayList<ItemPlaceProduct>):RecyclerView.Adapter<PlaceProductAdapter.CustomViewHolder>() {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlaceProductAdapter.CustomViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_place_product,parent,false)
         return CustomViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: PlaceProductAdapter.CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.place.setImageResource(placeList.get(position).place)
     }
 

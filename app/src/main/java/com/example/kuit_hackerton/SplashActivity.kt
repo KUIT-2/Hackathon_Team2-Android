@@ -1,12 +1,9 @@
 package com.example.kuit_hackerton
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.kuit_hackerton.databinding.ActivityMainBinding
 import com.example.kuit_hackerton.databinding.ActivitySplashBinding
 
 class SplashActivity : ComponentActivity() {

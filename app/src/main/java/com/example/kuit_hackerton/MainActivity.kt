@@ -1,9 +1,11 @@
 package com.example.kuit_hackerton
 
-import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kuit_hackerton.BottomNavi.BotBubbleFragment
+import com.example.kuit_hackerton.BottomNavi.BotCalendarFragment
+import com.example.kuit_hackerton.BottomNavi.BotGlassFragment
+import com.example.kuit_hackerton.BottomNavi.BotPeopleFragment
 import com.example.kuit_hackerton.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
