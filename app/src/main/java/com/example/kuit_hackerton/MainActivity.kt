@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Log.d("isit", "Start RestaurantActivity")
 
         // 프래그먼트 트랜잭션 시작
         val transaction = supportFragmentManager.beginTransaction()
