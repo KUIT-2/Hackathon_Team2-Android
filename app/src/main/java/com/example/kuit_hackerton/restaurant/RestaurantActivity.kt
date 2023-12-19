@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kuit_hackerton.ReservationEndFragment
 import com.example.kuit_hackerton.ReservationInfoCheckFragment
+
 import com.example.kuit_hackerton.databinding.ActivityRestaurantBinding
 import com.example.kuit_hackerton.time.CalanderFragment
+
 
 class RestaurantActivity : AppCompatActivity() {
     lateinit var binding: ActivityRestaurantBinding
