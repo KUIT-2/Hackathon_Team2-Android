@@ -1,27 +1,22 @@
-package com.example.kuit_hackerton
+package com.example.kuit_hackerton.time
 
 import android.app.Activity
 import android.app.Dialog
-import android.content.Intent
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kuit_hackerton.R
+import com.example.kuit_hackerton.TodayDecorator
 import com.example.kuit_hackerton.databinding.FragmentCalanderBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class CalanderFragment : BottomSheetDialogFragment()  {
 
@@ -92,6 +87,6 @@ lateinit var binding: FragmentCalanderBinding
         )
         Log.d("isit","hell")
         binding.rvTime.layoutManager=LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
-        binding.rvTime.adapter=TimeAdapter(timeList)
+        binding.rvTime.adapter= TimeAdapter(timeList)
     }
 }
