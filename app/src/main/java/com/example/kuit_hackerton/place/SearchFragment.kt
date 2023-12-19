@@ -75,7 +75,6 @@ class SearchFragment : Fragment() {
     }
 
     private fun initDummyData(){//여긴 리싸이클러
-        binding = FragmentSerchBinding.inflate(layoutInflater)
         val placeList = arrayListOf(
             PlaceProduct(R.drawable._706yeouido),
             PlaceProduct(R.drawable.busan_),
