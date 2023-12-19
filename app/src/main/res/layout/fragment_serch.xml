@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <?xml version="1.0" encoding="utf-8"?>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:backgroundTint="@color/white"
         android:layout_width="match_parent"
@@ -88,11 +87,12 @@
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vp_home_image"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="260dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_top_appbar"
             app:layout_constraintEnd_toEndOf="parent"/>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_list_guide"
             android:layout_width="match_parent"
@@ -102,6 +102,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
             <LinearLayout
+                android:clickable="true"
+                android:id="@+id/ll_everything"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +112,6 @@
 
 
             <LinearLayout
-                android:id="@+id/iv_suish"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:orientation="vertical"
@@ -118,6 +119,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:padding="5dp">
                 <ImageView
+
+                    android:id="@+id/iv_suish"
                     android:layout_width="52dp"
                     android:layout_height="52dp"
                     android:src="@drawable/ic_suish"/>
@@ -201,6 +204,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_everything_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
@@ -209,6 +213,7 @@
 
 
                 <LinearLayout
+                    android:clickable="true"
                     android:id="@+id/iv_hotel_rest"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
@@ -348,8 +353,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_where_going"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="0dp"
             tools:listitem="@layout/item_place_product" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

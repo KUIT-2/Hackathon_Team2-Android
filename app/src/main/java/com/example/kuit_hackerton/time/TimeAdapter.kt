@@ -1,13 +1,12 @@
-package com.example.kuit_hackerton
+package com.example.kuit_hackerton.time
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.kuit_hackerton.databinding.ItemTimeSelectBinding
+import com.example.kuit_hackerton.R
+
 class TimeAdapter(val gettime:ArrayList<TImeInfo>):RecyclerView.Adapter<TimeAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) :
@@ -15,12 +14,12 @@ class TimeAdapter(val gettime:ArrayList<TImeInfo>):RecyclerView.Adapter<TimeAdap
             val time=itemView.findViewById<TextView>(R.id.tv_time)
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TimeAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view=LayoutInflater.from(parent.context).inflate(R.layout.item_time_select,parent,false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: TimeAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.time.text=gettime.get(position).Time//타임 넣어줌
     }
 
