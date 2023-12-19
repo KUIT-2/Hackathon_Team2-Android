@@ -1,9 +1,14 @@
-package com.example.kuit_hackerton
+package com.example.kuit_hackerton.restaurant
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+<<<<<<< HEAD:app/src/main/java/com/example/kuit_hackerton/RestaurantActivity.kt
 import com.example.kuit_hackerton.CalanderFragment
 import com.example.kuit_hackerton.databinding.ActivityRestaurantBinding
+=======
+import com.example.kuit_hackerton.databinding.ActivityRestaurantBinding
+import com.example.kuit_hackerton.time.CalanderFragment
+>>>>>>> 880e1ed75a80a4cac92563a00814b68a441c9a02:app/src/main/java/com/example/kuit_hackerton/restaurant/RestaurantActivity.kt
 
 class RestaurantActivity : AppCompatActivity() {
     lateinit var binding: ActivityRestaurantBinding

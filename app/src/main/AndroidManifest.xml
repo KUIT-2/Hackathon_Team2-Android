@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".server.ApplicationClass"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,16 +14,24 @@
         android:theme="@style/Theme.KUIT_Hackerton"
         tools:targetApi="31">
         <activity
+            android:name=".RestListDiscrete"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantList"
+            android:exported="false" />
+        <activity
+            android:name=".place.ListActivity"
+            android:exported="false" />
+        <activity
             android:name=".PayActivity"
             android:exported="false" />
         <activity
-            android:name=".RestaurantActivity"
+            android:name=".restaurant.RestaurantActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".restaurant.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

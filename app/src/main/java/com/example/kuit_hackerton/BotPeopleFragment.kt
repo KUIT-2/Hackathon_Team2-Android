@@ -1,4 +1,4 @@
-package com.example.kuit_hackerton.BottomNavi
+package com.example.kuit_hackerton
 
 import android.os.Bundle
 import android.view.LayoutInflater
