@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="571dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/tv_reservation_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예약이 완료되었습니다."
+            android:textStyle="bold"
+            android:textSize="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_reservation_finish"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tv_restraunt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="레스토랑"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_restraunt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@id/tv_restraunt"
+                android:text="음식점 이름"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="24dp"/>
+            <TextView
+                android:id="@+id/tv_reservation_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14dp"
+                android:text="예약일시"
+                app:layout_constraintTop_toBottomOf="@id/tv_restraunt"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_reservation_date_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@id/tv_restraunt_name"
+                android:text="XX.XX(요일), 시간, 인원"
+                app:layout_constraintTop_toTopOf="@id/tv_reservation_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_restraunt_name"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_reservation_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_decline"
+                    android:layout_width="140dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/rectangle_square"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메인으로 가기"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    app:layout_constraintTop_toTopOf="@id/iv_decline"
+                    app:layout_constraintStart_toStartOf="@id/iv_decline"
+                    app:layout_constraintEnd_toEndOf="@id/iv_decline"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_decline"/>
+
+                <ImageView
+                    android:id="@+id/iv_final_choice"
+                    android:layout_width="140dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/rectangle_reservation"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약내역 확인"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    app:layout_constraintTop_toTopOf="@id/iv_final_choice"
+                    app:layout_constraintStart_toStartOf="@id/iv_final_choice"
+                    app:layout_constraintEnd_toEndOf="@id/iv_final_choice"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_final_choice"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
