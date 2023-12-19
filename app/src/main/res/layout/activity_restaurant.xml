@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_top_appbar_stu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back_stu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_home_stu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/home"
+            app:layout_constraintStart_toEndOf="@id/iv_back_stu"
+            app:layout_constraintTop_toTopOf="@+id/iv_back_stu" />
+
+
+        <ImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/bookmark_w"
+            app:layout_constraintEnd_toStartOf="@id/iv_dots_stu"
+            app:layout_constraintTop_toTopOf="@id/iv_dots_stu" />
+
+
+        <ImageView
+            android:id="@+id/iv_dots_stu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page_cons_stu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:text="음식점 이름"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_restaurant" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="25dp"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_restaurant">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/map_pin" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_restaurant_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="음식점 소개"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_restaurant_name" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="7dp"
+                android:text="음식점 종류,지역"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_restaurant_explain" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/star_yellow"
+                app:layout_constraintEnd_toStartOf="@id/tv_restaurant_rate"
+                app:layout_constraintTop_toTopOf="@id/tv_restaurant_rate" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="15dp"
+                android:text="X.X"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_restaurant_local" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_people_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:text="(XX)"
+                android:textColor="#D6D6D6"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/tv_restaurant_rate"
+                app:layout_constraintTop_toBottomOf="@id/tv_restaurant_local" />
+
+            <View
+                android:id="@+id/view_first"
+                android:layout_width="match_parent"
+                android:layout_height="9dp"
+                android:layout_marginTop="24dp"
+                android:background="#EFEFEF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_restaurant_people_number" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:text="레스토람 함께 고르기"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_first" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_restaurant_add"
+                android:layout_width="55dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="15dp"
+                app:cardBackgroundColor="#D9D9D9"
+
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_first">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+담기"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/view_second"
+                android:layout_width="match_parent"
+                android:layout_height="9dp"
+                android:layout_marginTop="12dp"
+                android:background="#EFEFEF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_restaurant_choose" />
+
+            <LinearLayout
+                android:id="@+id/tb_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_second">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingStart="35dp"
+                    android:text="홈"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingStart="35dp"
+                    android:text="메뉴"
+                    android:textColor="#949494"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingStart="35dp"
+                    android:text="사진"
+                    android:textColor="#949494"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingStart="35dp"
+                    android:text="리뷰"
+                    android:textColor="#949494"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_underline_1"
+                android:layout_width="84dp"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tb_restaurant"></View>
+
+            <View
+                android:id="@+id/view_underline_2"
+                android:layout_width="291dp"
+                android:layout_height="2dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toEndOf="@id/view_underline_1"
+                app:layout_constraintTop_toBottomOf="@id/tb_restaurant"></View>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="330dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tb_restaurant">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cv_reservation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_calander"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="11dp"
+                        android:src="@drawable/calendar"
+                        app:layout_constraintStart_toStartOf="@id/cv_reservation"
+                        app:layout_constraintTop_toTopOf="@+id/cv_reservation" />
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_people_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="XX(요일)/XX명"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@id/iv_calander"
+                        app:layout_constraintTop_toTopOf="@id/iv_calander" />
+
+                    <ImageView
+                        android:id="@+id/iv_calander_list"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="9dp"
+                        android:src="@drawable/arrow_down"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/iv_calander" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_back_under"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="34dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_home_under"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toEndOf="@id/iv_back_under"
+        app:layout_constraintTop_toTopOf="@id/iv_back_under" />
+
+    <ImageView
+        android:id="@+id/iv_bookmark_under"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/bookmark_w"
+        app:layout_constraintStart_toEndOf="@id/iv_home_under"
+        app:layout_constraintTop_toTopOf="@id/iv_back_under" />
+
+    <ImageView
+        android:id="@+id/iv_share_under"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/share"
+        app:layout_constraintStart_toEndOf="@id/iv_bookmark_under"
+        app:layout_constraintTop_toTopOf="@id/iv_back_under" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="28dp"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_make_reservation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_make_reservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약하기"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

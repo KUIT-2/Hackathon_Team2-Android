@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PayActivity">
+
+    <ImageView
+        android:id="@+id/iv_pay_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pay_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="음식점 이름"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/iv_pay_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pay_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="예약금 결제"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/iv_pay_back"
+        app:layout_constraintTop_toBottomOf="@id/iv_pay_back" />
+
+    <TextView
+        android:id="@+id/tv_pay_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="1인당 예약금xx"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_pay_back"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_reservation" />
+
+    <TextView
+        android:id="@+id/tv_pay_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="XX,XXX원"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_pay_cost"
+        app:layout_goneMarginEnd="4dp" />
+
+    <View
+        android:id="@+id/view_first"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20.5dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="@id/tv_pay_cost"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_cost" />
+
+    <TextView
+        android:id="@+id/tv_total_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20.5dp"
+        android:text="총 예약금"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/view_first"
+        app:layout_constraintTop_toBottomOf="@id/view_first"
+        app:layout_goneMarginEnd="4dp" />
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XX,XXX원"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_pay_price"
+        app:layout_constraintTop_toTopOf="@id/tv_total_cost" />
+
+    <View
+        android:id="@+id/view_second"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_cost" />
+
+    <TextView
+        android:id="@+id/tv_pay_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="결제수단"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_second" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/help"
+        app:layout_constraintStart_toEndOf="@id/tv_pay_method"
+        app:layout_constraintTop_toTopOf="@id/tv_pay_method" />
+
+    <TextView
+        android:id="@+id/tv_pay_needto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="24dp"
+        android:text="필수 선택"
+        android:textColor="#E33A3A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_method" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_check_out"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="@id/tv_pay_method"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_method">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="50dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_catch_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="3dp"
+        android:text="캐치페이"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/cv_check_out"
+        app:layout_constraintTop_toTopOf="@id/cv_check_out" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="3dp"
+        android:text="xx개 등록됨"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/tv_catch_pay"
+        app:layout_constraintTop_toTopOf="@id/tv_catch_pay" />
+
+    <ImageView
+        android:id="@+id/iv_toggle_down"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/arrow_toggle_down"
+        app:layout_constraintStart_toStartOf="@id/tv_pay_needto"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_needto" />
+
+    <View
+        android:id="@+id/view_third"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_marginTop="37dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_toggle_down" />
+
+    <TextView
+        android:id="@+id/tv_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="32dp"
+        android:text="주문 내용 확인 및 결제 동의"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_third"
+        app:layout_goneMarginStart="23dp" />
+
+    <TextView
+        android:id="@+id/tv_pay_needto_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="필수 선택"
+        android:textColor="#E33A3A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_pay_needto"
+        app:layout_constraintTop_toTopOf="@id/tv_agree" />
+
+    <ImageView
+        android:id="@+id/iv_check_box"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/checkbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_agree" />
+
+    <TextView
+        android:id="@+id/tv_you_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[필수] 취소 및 환불 규정에 동의합니다"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_check_box"
+        app:layout_constraintTop_toTopOf="@+id/iv_check_box" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_explain"
+        android:layout_width="303dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="28dp"
+        app:cardBackgroundColor="#F5F5F5"
+        app:layout_constraintTop_toBottomOf="@id/tv_you_agree"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X일전 취소는 XXX% 환불 ~"
+            android:textColor="#727272"
+            android:textSize="12sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_real_pay"
+        android:layout_width="292dp"
+        android:layout_height="52dp"
+        app:cardBackgroundColor="#D9D9D9"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/cv_explain"
+        app:layout_constraintTop_toBottomOf="@+id/cv_explain">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX,XXX원 결제하기"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

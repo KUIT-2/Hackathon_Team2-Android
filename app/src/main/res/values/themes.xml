@@ -6,4 +6,16 @@
     </style>
 
     <style name="Theme.KUIT_Hackerton" parent="Base.Theme.KUIT_Hackerton" />
+
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+    </style>
+    <style name="RoundCornerBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/RoundCornerModalStyle</item>
+    </style>
+
+    <style name="RoundCornerModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/white_round_top_border_20</item>
+    </style>
 </resources>
