@@ -12,7 +12,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.kuit_hackerton.R
+import com.example.kuit_hackerton.RestaurantListActivity
 import com.example.kuit_hackerton.databinding.FragmentSerchBinding
+import com.example.kuit_hackerton.restaurant.RestaurantActivity
 
 class SearchFragment : Fragment() {
     private val imageSwiper=ImageSwiper()//swiper구현
@@ -33,27 +35,21 @@ class SearchFragment : Fragment() {
         //눌릴수있ㄴㄴ데 setonClick이 안받네
 
 
-        binding.root.setOnClickListener{
-            val myintent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
-            startActivity(myintent)
 
-        }
-        binding.rvPlaceChoice.requestFocus()
+
         binding.rvPlaceChoice.setOnClickListener{
-            val myintent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
+            val myintent = Intent(requireContext(),RestaurantListActivity::class.java) //리스트 액티비티랑 바인딩하기
             startActivity(myintent)
         }
         binding.ivSuish.setOnClickListener{
             Log.d("whynot","whynot")
-            val intent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
+            val intent = Intent(requireContext(),RestaurantListActivity::class.java) //리스트 액티비티랑 바인딩하기
             startActivity(intent)
         }
 
-        binding.clListGuide.requestFocus()
-
         binding.clListGuide.setOnClickListener{
             Log.d("whynot1","whynot1")
-            val intent = Intent(requireContext(),ListActivity::class.java) //리스트 액티비티랑 바인딩하기
+            val intent = Intent(requireContext(), RestaurantListActivity::class.java) //리스트 액티비티랑 바인딩하기
             startActivity(intent)
         }
         imageSwiper.start()

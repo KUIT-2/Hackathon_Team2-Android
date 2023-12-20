@@ -17,7 +17,7 @@
             android:name=".RestListDiscrete"
             android:exported="false" />
         <activity
-            android:name=".RestaurantList"
+            android:name=".RestaurantListActivity"
             android:exported="false" />
         <activity
             android:name=".place.ListActivity"
